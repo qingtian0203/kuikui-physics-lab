@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>葵葵初三物理电热通关实验室 · 错题靶向特训</title>
+  <link rel="stylesheet" href="css/styles.css?v=1" />
+</head>
+<body>
+  <!-- 顶部吸顶导航与实时通关进度栏 -->
+  <header class="top-navbar" id="topNavbar">
+    <div class="navbar-inner">
+      <div class="brand-group" id="brandHomeBtn" role="button" tabindex="0" aria-label="返回特训总览">
+        <div class="brand-badge">⚡</div>
+        <div class="brand-text">
+          <span class="brand-title">葵葵物理 · 电热靶向通关</span>
+          <span class="brand-subtitle">九年级全一册 · 第 142 页错题特训</span>
+        </div>
+      </div>
+
+      <!-- 核心模块切换标签栏（吸顶不滚丢） -->
+      <nav class="main-tabs" aria-label="主功能导航">
+        <button type="button" class="tab-btn active" data-tab="guide">
+          <span class="tab-icon">🧭</span>秒杀口诀与电路沙盒
+        </button>
+        <button type="button" class="tab-btn" data-tab="topic1">
+          <span class="tab-icon">⏱️</span>专题一：分段用电 <span class="tab-count" id="navCountTopic1">0/6</span>
+        </button>
+        <button type="button" class="tab-btn" data-tab="topic2">
+          <span class="tab-icon">🔌</span>专题二：文火武火 <span class="tab-count" id="navCountTopic2">0/6</span>
+        </button>
+        <button type="button" class="tab-btn" data-tab="mistakes">
+          <span class="tab-icon">🎯</span>待攻坚错题 <span class="tab-badge-warn" id="navCountMistakes">0</span>
+        </button>
+      </nav>
+
+      <!-- 全局通关进度条 -->
+      <div class="progress-summary">
+        <div class="progress-label-row">
+          <span>通关进度</span>
+          <strong id="globalProgressText">0 / 12</strong>
+        </div>
+        <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0" id="globalProgressBarWrap">
+          <div class="progress-fill" id="globalProgressFill" style="width: 0%"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 主内容工作台 -->
+  <main class="workspace-container" id="workspaceContainer">
+    <!-- 由 app.js 动态渲染当前模块视图 -->
+  </main>
+
+  <!-- 底部轻量页脚与练习状态管理 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>初三物理「电功、电功率与焦耳定律」靶向特训 · 作答进度自动保存在当前浏览器</span>
+      <button type="button" class="ghost-reset-btn" id="resetAllProgressBtn">重置全部作答记录</button>
+    </div>
+  </footer>
+
+  <!-- 轻量反馈提示条 -->
+  <div class="toast-banner" id="toastBanner" role="status" aria-live="polite"></div>
+
+  <!-- 模块脚本：标准物理 SVG 引擎、严选题库、主应用交互逻辑 -->
+  <script src="js/svg-diagrams.js?v=1"></script>
+  <script src="js/questions-data.js?v=1"></script>
+  <script src="js/app.js?v=1"></script>
+</body>
+</html>
